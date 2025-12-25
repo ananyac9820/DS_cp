@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# VS Code
+.vscode/
+
+# C++ compiled binaries
+*.exe
+*.out
+
+# Large data / outputs
+data/
+output/
+*.png
+*.gz
+*.pt
+
+# Generated files
+encoded.txt
+decoded.fasta
+train_pairs.txt

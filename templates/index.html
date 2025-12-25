@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DNA AI Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>DNA AI Analyzer</h1>
+        <div class="subtitle">Next-base prediction & species classifier (demo)</div>
+      </div>
+      <div class="status-block">
+        <div>Next-base model: <span id="mb-status" class="status">checking...</span></div>
+        <div>Species model: <span id="sp-status" class="status">checking...</span></div>
+      </div>
+    </div>
+
+    <label for="seqInput">Paste DNA sequence (A/C/G/T):</label>
+    <textarea id="seqInput" placeholder="Paste DNA sequence here..."></textarea>
+
+    <div class="btn-row">
+      <button id="predictBtn" class="btn primary">Predict Next Base</button>
+      <button id="classifyBtn" class="btn secondary">Classify Species</button>
+    </div>
+
+    <div class="result-grid">
+      <div class="result-box" id="nextResult">Predicted next base will appear here.</div>
+      <div class="result-box" id="speciesResult">Species prediction and probabilities will appear here.</div>
+    </div>
+
+    <div class="footer-note">
+      Tip: you can paste a sequence sampled from files under <code>data/species_synth/</code> for demo.
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
